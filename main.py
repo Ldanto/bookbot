@@ -1,10 +1,11 @@
-from stats import get_word_count
+from stats import get_word_count, get_letter_counts
 
 def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
     num_words = get_word_count(text)
     print(f"Found {num_words} total words")
+    print(get_letter_counts(text))
 
 
 
