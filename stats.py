@@ -12,3 +12,13 @@ def get_letter_counts(file_contents):
         if i not in char_counts_dict:       #   creates new key for new char
             char_counts_dict[i] = 1
     return char_counts_dict
+
+def sort_on(d):
+    return d["num"]
+
+def sort_by_quantity(char_dict):
+    sorted_list = []
+    for ch in char_dict:
+        sorted_list.append({"char": ch, "num": char_dict[ch]})
+    sorted_list.sort(reverse = True, key=sort_on)
+    return sorted_list
